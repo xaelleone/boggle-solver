@@ -55,5 +55,5 @@ def find_words(grid, path, words_gathered):
     neighbors = get_neighbors(grid, r, c)
     for neighbor in neighbors:
         if neighbor not in path:
-            words_gathered.extend(find_words(grid, path + [neighbor], words_gathered))
+            words_gathered = find_words(grid, path + [neighbor], words_gathered)
     return words_gathered
